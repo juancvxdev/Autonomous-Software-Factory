@@ -1,0 +1,7 @@
+.gradle/
+build/
+docs/rendered/
+*.tmp
+*.log
+.env
+*.local

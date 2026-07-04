@@ -1,0 +1,10 @@
+
+  \u2717 GATE DE CALIDAD: BLOQUEADO
+
+  \u2713 PRUEBAS: OK
+  \u2713 SEGURIDAD: OK
+  \u2717 CRITERIOS: FR-003: incumple; EDGE-CONCURRENCY: incumple
+
+  \u2192 El código no cumple la Definition of Done. No se aprueba.
+  \u2192 Corrige lo señalado y vuelve a ejecutar `quality verify`.
+

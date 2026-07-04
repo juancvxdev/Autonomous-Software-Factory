@@ -1,0 +1,48 @@
+{
+  "proyecto": "autonomous-software-factory-dentista",
+  "version": "1.0.0",
+  "fecha": "2026-07-04",
+  "commit": "pre-quality-fix",
+  "spec": "specs/us-06-anti-doble-agendamiento/spec.md",
+  "estado": "bloqueado antes de cubrir concurrencia",
+  "tests": {
+    "comando": "./gradlew clean test jacocoTestReport --console=plain",
+    "passed": 6,
+    "total": 6,
+    "coverage": 84.8,
+    "coverage_fuente": "build/reports/jacoco/test/jacocoTestReport.xml; estado previo sin prueba concurrente"
+  },
+  "security": {
+    "fuente": "Semgrep MCP configurado en .mcp.json; Semgrep p/java + busqueda local de secretos",
+    "critical": 0,
+    "high": 0,
+    "secrets": 0,
+    "hallazgos": []
+  },
+  "criteria": [
+    {
+      "id": "FR-001",
+      "fuente": "spec.md - FR-001",
+      "status": "cumple",
+      "evidencia": "AgendaDentalServiceTest.reservaTurnoLibre_ok PASA"
+    },
+    {
+      "id": "FR-002",
+      "fuente": "spec.md - FR-002",
+      "status": "cumple",
+      "evidencia": "AgendaDentalServiceTest.reservaTurnoOcupado_secuencial_rechaza PASA"
+    },
+    {
+      "id": "FR-003",
+      "fuente": "spec.md - FR-003 / escenario concurrente",
+      "status": "incumple",
+      "evidencia": "faltaba una prueba explicita para dos reservas simultaneas sobre el mismo turno"
+    },
+    {
+      "id": "EDGE-CONCURRENCY",
+      "fuente": "spec.md - Edge Cases",
+      "status": "incumple",
+      "evidencia": "no estaba probado el caso de dos pacientes reservando al mismo tiempo"
+    }
+  ]
+}

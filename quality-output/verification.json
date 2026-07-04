@@ -1,0 +1,71 @@
+{
+  "proyecto": "autonomous-software-factory-dentista",
+  "version": "1.0.0",
+  "fecha": "2026-07-04",
+  "commit": "local-final",
+  "spec": "specs/us-06-anti-doble-agendamiento/spec.md",
+  "tests": {
+    "comando": "./gradlew clean test jacocoTestReport --console=plain",
+    "passed": 7,
+    "total": 7,
+    "coverage": 90.9,
+    "coverage_fuente": "build/reports/jacoco/test/jacocoTestReport.xml; LINE covered=30 missed=3"
+  },
+  "security": {
+    "fuente": "Semgrep MCP configurado en .mcp.json; escaneo ejecutado con Semgrep p/java en quality-output/semgrep.json + busqueda local de secretos",
+    "critical": 0,
+    "high": 0,
+    "secrets": 0,
+    "hallazgos": []
+  },
+  "criteria": [
+    {
+      "id": "FR-001",
+      "fuente": "spec.md - FR-001",
+      "status": "cumple",
+      "evidencia": "AgendaDentalServiceTest.reservaTurnoLibre_ok PASA"
+    },
+    {
+      "id": "FR-002",
+      "fuente": "spec.md - FR-002",
+      "status": "cumple",
+      "evidencia": "AgendaDentalServiceTest.reservaTurnoOcupado_secuencial_rechaza PASA"
+    },
+    {
+      "id": "FR-003",
+      "fuente": "spec.md - FR-003 / reservas concurrentes",
+      "status": "cumple",
+      "evidencia": "AgendaDentalServiceTest.reservaTurnoOcupado_concurrente_soloUnaProspera PASA"
+    },
+    {
+      "id": "FR-004",
+      "fuente": "spec.md - FR-004",
+      "status": "cumple",
+      "evidencia": "AgendaDentalServiceTest.reservaTurnoDistintoMismoDoctor_ok PASA"
+    },
+    {
+      "id": "FR-005",
+      "fuente": "spec.md - FR-005",
+      "status": "cumple",
+      "evidencia": "AgendaDentalServiceTest.reservaMismaHoraDiferenteDoctor_ok PASA"
+    },
+    {
+      "id": "FR-006",
+      "fuente": "spec.md - FR-006",
+      "status": "cumple",
+      "evidencia": "AgendaDentalServiceTest.api_creaYListaCitas PASA"
+    },
+    {
+      "id": "FR-007",
+      "fuente": "spec.md - FR-007",
+      "status": "cumple",
+      "evidencia": "AgendaDentalServiceTest.api_turnoOcupado_devuelveConflict PASA"
+    },
+    {
+      "id": "EDGE-CONCURRENCY",
+      "fuente": "spec.md - Edge Cases: dos pacientes intentan reservar el mismo turno al mismo tiempo",
+      "status": "cumple",
+      "evidencia": "AgendaDentalServiceTest.reservaTurnoOcupado_concurrente_soloUnaProspera usa CyclicBarrier; resultado esperado: 1 exito y 1 rechazo"
+    }
+  ]
+}
