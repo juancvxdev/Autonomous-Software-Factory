@@ -55,3 +55,11 @@ El informe Word editable esta en:
 - `docs/Informe_Final_Autonomous_Software_Factory_Juan_Jose_Cordova.docx`
 
 Incluye introduccion, analisis de Discovery Agent, Agile Delivery Team, SDD, Quality Agent, capturas de consola del gate, conclusiones, recomendaciones y anexos con enlaces a repositorios.
+
+Las capturas usadas dentro del informe estan en:
+
+- `docs/screenshots/discovery-agent.png`
+- `docs/screenshots/agile-delivery-team.png`
+- `docs/screenshots/sdd-spec-kit.png`
+- `quality-output/screenshots/gate-bloqueado.png`
+- `quality-output/screenshots/gate-aprobado.png`

@@ -12,6 +12,9 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "docs" / "Informe_Final_Autonomous_Software_Factory_Juan_Jose_Cordova.docx"
 GATE_BLOCKED_IMG = ROOT / "quality-output" / "screenshots" / "gate-bloqueado.png"
 GATE_APPROVED_IMG = ROOT / "quality-output" / "screenshots" / "gate-aprobado.png"
+DISCOVERY_IMG = ROOT / "docs" / "screenshots" / "discovery-agent.png"
+AGILE_IMG = ROOT / "docs" / "screenshots" / "agile-delivery-team.png"
+SDD_IMG = ROOT / "docs" / "screenshots" / "sdd-spec-kit.png"
 
 
 def set_cell_shading(cell, fill):
@@ -145,6 +148,10 @@ def main():
             "M\u00e9trica principal: reducir la tasa de no-show y aumentar citas gestionadas dentro del sistema.",
         ],
     )
+    if DISCOVERY_IMG.exists():
+        p = doc.add_paragraph("Captura de evidencia usada del Discovery Agent:")
+        p.runs[0].bold = True
+        doc.add_picture(str(DISCOVERY_IMG), width=Inches(6.3))
 
     doc.add_heading("An\u00e1lisis del Agile Delivery Team", level=1)
     doc.add_paragraph(
@@ -166,6 +173,10 @@ def main():
         "Para el trabajo nuevo seleccione la historia US-06 Anti doble-agendamiento, porque representa un "
         "riesgo real de operaci\u00f3n y obliga a validar concurrencia, no solo el camino feliz."
     )
+    if AGILE_IMG.exists():
+        p = doc.add_paragraph("Captura de evidencia usada del Agile Delivery Team:")
+        p.runs[0].bold = True
+        doc.add_picture(str(AGILE_IMG), width=Inches(6.3))
 
     doc.add_heading("An\u00e1lisis del desarrollo con SDD", level=1)
     doc.add_paragraph(
@@ -186,6 +197,10 @@ def main():
         "El dise\u00f1o usa `ConcurrentHashMap.putIfAbsent` para que el turno dental se reserve de forma at\u00f3mica. "
         "As\u00ed, cuando dos pacientes intentan tomar el mismo horario, solo una reserva queda registrada."
     )
+    if SDD_IMG.exists():
+        p = doc.add_paragraph("Captura de evidencia generada con Spec-Kit:")
+        p.runs[0].bold = True
+        doc.add_picture(str(SDD_IMG), width=Inches(6.3))
 
     doc.add_heading("An\u00e1lisis del Quality Agent", level=1)
     doc.add_paragraph(
