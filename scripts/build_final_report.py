@@ -10,6 +10,8 @@ from docx.oxml.ns import qn
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "docs" / "Informe_Final_Autonomous_Software_Factory_Juan_Jose_Cordova.docx"
+GATE_BLOCKED_IMG = ROOT / "quality-output" / "screenshots" / "gate-bloqueado.png"
+GATE_APPROVED_IMG = ROOT / "quality-output" / "screenshots" / "gate-aprobado.png"
 
 
 def set_cell_shading(cell, fill):
@@ -240,11 +242,19 @@ def main():
         "Gate bloqueado",
         "GATE DE CALIDAD: BLOQUEADO\nPRUEBAS: OK\nSEGURIDAD: OK\nCRITERIOS: FR-003 incumple; EDGE-CONCURRENCY incumple\nMotivo: faltaba prueba explicita de concurrencia.",
     )
+    if GATE_BLOCKED_IMG.exists():
+        p = doc.add_paragraph("Captura de consola - bloqueo del gate:")
+        p.runs[0].bold = True
+        doc.add_picture(str(GATE_BLOCKED_IMG), width=Inches(6.3))
     add_code_box(
         doc,
         "Gate aprobado",
         "GATE DE CALIDAD: APROBADO\nPRUEBAS: 7/7 - cobertura 90.9% >= 80%\nSEGURIDAD: 0 criticas - 0 secretos\nCRITERIOS: 8 criterios cumplen",
     )
+    if GATE_APPROVED_IMG.exists():
+        p = doc.add_paragraph("Captura de consola - resolucion aprobada:")
+        p.runs[0].bold = True
+        doc.add_picture(str(GATE_APPROVED_IMG), width=Inches(6.3))
 
     doc.add_heading("Conclusiones", level=1)
     add_bullets(

@@ -35,6 +35,8 @@ Los artefactos de Spec-Kit estan en:
 - `quality-output/report.html`
 - `quality-output/semgrep.json`
 - `quality-output/gate-output.txt`
+- `quality-output/screenshots/gate-bloqueado.png`
+- `quality-output/screenshots/gate-aprobado.png`
 - `quality-output/before-fix/verification.json`
 - `quality-output/before-fix/gate-output.txt`
 
@@ -52,7 +54,7 @@ El informe Word editable esta en:
 
 - `docs/Informe_Final_Autonomous_Software_Factory_Juan_Jose_Cordova.docx`
 
-Incluye introduccion, analisis de Discovery Agent, Agile Delivery Team, SDD, Quality Agent, conclusiones, recomendaciones y anexos con enlaces a repositorios.
+Incluye introduccion, analisis de Discovery Agent, Agile Delivery Team, SDD, Quality Agent, capturas de consola del gate, conclusiones, recomendaciones y anexos con enlaces a repositorios.
 
 ## Evidencias y prompts
 
