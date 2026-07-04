@@ -1,8 +1,8 @@
 # Proyecto Final - Autonomous Software Factory
 
-Autor: Juan Jose Cordova  
-Asignatura: Ingenieria de Software - Maestria en Software  
-Producto: sistema de reserva de citas dentales  
+Autor: Juan José Córdova  
+Asignatura: Ingeniería de Software - Maestría en Software  
+Producto: sistema de reserva de citas dentales
 
 Este repositorio integra el flujo completo del proyecto final:
 
@@ -17,13 +17,13 @@ Discovery Agent -> Agile Delivery Team -> Desarrollo con SDD -> Quality Agent
 
 ## Funcionalidad implementada
 
-Se selecciono la historia US-06 Anti doble-agendamiento del contexto `citasdentista`.
+Se seleccionó la historia US-06 Anti doble-agendamiento del contexto `citasdentista`.
 
-La funcionalidad evita que dos pacientes reserven el mismo turno del mismo doctor. El servicio usa una reserva atomica para que, incluso si dos solicitudes llegan casi al mismo tiempo, solo una cita quede registrada.
+La funcionalidad evita que dos pacientes reserven el mismo turno del mismo doctor. El servicio usa una reserva atómica para que, incluso si dos solicitudes llegan casi al mismo tiempo, solo una cita quede registrada.
 
 ## Artefactos SDD
 
-Los artefactos de Spec-Kit estan en:
+Los artefactos de Spec-Kit están en:
 
 - `specs/us-06-anti-doble-agendamiento/spec.md`
 - `specs/us-06-anti-doble-agendamiento/plan.md`
@@ -44,21 +44,21 @@ Resultado final:
 
 - Pruebas: 7/7
 - Cobertura: 90.9%
-- Seguridad: 0 criticas, 0 secretos
+- Seguridad: 0 críticas, 0 secretos
 - Criterios: 8 criterios cumplen
 - Gate: aprobado
 
 ## Informe final
 
-El informe Word editable esta en:
+El informe Word editable está en:
 
 - `docs/Informe_Final_Autonomous_Software_Factory_Juan_Jose_Cordova.docx`
 
-Incluye introduccion, analisis de Discovery Agent, Agile Delivery Team, SDD, Quality Agent, capturas de consola del gate, conclusiones, recomendaciones y anexos con enlaces a repositorios.
+Incluye introducción, análisis de Discovery Agent, Agile Delivery Team, SDD, Quality Agent, capturas de consola del gate, conclusiones, recomendaciones y anexos con enlaces a repositorios.
 
 ## Evidencias y prompts
 
-Los prompts y logs usados para el informe estan en:
+Los prompts y logs usados para el informe están en:
 
 - `evidence/discovery/`
 - `evidence/agile/`

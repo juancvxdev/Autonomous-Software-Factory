@@ -14,7 +14,7 @@ Artefactos reutilizados:
 
 Resultado incorporado al informe:
 
-- Epicas: reserva autonoma, confirmacion/recordatorio, fuente unica de recepcion y agenda del doctor.
+- epicas: reserva autonoma, confirmacion/recordatorio, fuente unica de recepcion y agenda del doctor.
 - Historias INVEST: US-01 a US-08.
 - Historia seleccionada para el trabajo nuevo: US-06 Anti doble-agendamiento.
 - Motivo de seleccion: protege el dolor de recepcion sobre dobles reservas y obliga a validar concurrencia.

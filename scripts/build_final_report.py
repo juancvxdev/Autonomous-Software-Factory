@@ -106,8 +106,8 @@ def main():
 
     subtitle = doc.add_paragraph()
     subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    subtitle.add_run("Ingenieria de Software - Maestria en Software").bold = True
-    subtitle.add_run("\nJuan Jose Cordova\nFecha de entrega: 5 de julio de 2026\nModalidad: individual")
+    subtitle.add_run("Ingenier\u00eda de Software - Maestr\u00eda en Software").bold = True
+    subtitle.add_run("\nJuan Jos\u00e9 C\u00f3rdova\nFecha de entrega: 5 de julio de 2026\nModalidad: individual")
 
     doc.add_paragraph()
     add_table(
@@ -122,27 +122,27 @@ def main():
         ],
     )
 
-    doc.add_heading("Introduccion", level=1)
+    doc.add_heading("Introducci\u00f3n", level=1)
     doc.add_paragraph(
         "Este informe integra los agentes trabajados durante la materia en un flujo completo de "
         "Autonomous Software Factory. El caso usado fue un sistema de reserva de citas dentales. "
-        "La idea se descubrio con el Discovery Agent, se organizo con el Agile Delivery Team, se "
-        "implemento una funcionalidad mediante SDD y finalmente se valido con el Quality Agent."
+        "La idea se descubri\u00f3 con el Discovery Agent, se organizo con el Agile Delivery Team, se "
+        "implemento una funcionalidad mediante SDD y finalmente se valid\u00f3 con el Quality Agent."
     )
 
-    doc.add_heading("Analisis del Discovery Agent", level=1)
+    doc.add_heading("An\u00e1lisis del Discovery Agent", level=1)
     doc.add_paragraph(
-        "En la Unidad 1 utilice entrevistas de doctor, paciente y secretaria para descubrir el problema "
+        "En la Unidad 1 utilic\u00e9 entrevistas de doctor, paciente y secretaria para descubrir el problema "
         "principal del producto. El hallazgo central fue que la agenda estaba dispersa entre WhatsApp, "
-        "llamadas, papel y atencion presencial, sin una fuente unica de verdad."
+        "llamadas, papel y atenci\u00f3n presencial, sin una fuente \u00fanica de verdad."
     )
     add_bullets(
         doc,
         [
             "Personas identificadas: doctor, paciente y secretaria.",
-            "Dolores principales: doble agendamiento, no-shows, falta de confirmacion y poca visibilidad de horarios.",
-            "MVP definido: reserva autonoma de citas dentales sobre horarios reales.",
-            "Metrica principal: reducir la tasa de no-show y aumentar citas gestionadas dentro del sistema.",
+            "Dolores principales: doble agendamiento, no-shows, falta de confirmaci\u00f3n y poca visibilidad de horarios.",
+            "MVP definido: reserva aut\u00f3noma de citas dentales sobre horarios reales.",
+            "M\u00e9trica principal: reducir la tasa de no-show y aumentar citas gestionadas dentro del sistema.",
         ],
     )
     add_code_box(
@@ -156,11 +156,11 @@ def main():
         "Repositorio: https://github.com/juancvxdev/discovery-agent\nArtefactos: discoveries/citasdentista/outputs/mvp-canvas.md, personas.md, user-stories.md, report.html\nResultado: MVP Canvas de citasdentista con propuesta de valor y metrica de no-show.",
     )
 
-    doc.add_heading("Analisis del Agile Delivery Team", level=1)
+    doc.add_heading("An\u00e1lisis del Agile Delivery Team", level=1)
     doc.add_paragraph(
         "En la Unidad 2 use los resultados del Discovery Agent como insumo para organizar el MVP en epicas, "
-        "historias INVEST y un plan de sprint. El trabajo separo el valor del producto en reserva autonoma, "
-        "confirmacion, fuente unica de recepcion y agenda del doctor."
+        "historias INVEST y un plan de sprint. El trabajo separo el valor del producto en reserva aut\u00f3noma, "
+        "confirmacion, fuente \u00fanica de recepcion y agenda del doctor."
     )
     add_table(
         doc,
@@ -168,18 +168,18 @@ def main():
         [
             ["E-01", "Paciente reserva su cita viendo turnos reales"],
             ["E-02", "Paciente confirma, recuerda y libera su cita"],
-            ["E-03", "Recepcion opera sobre una fuente unica, sin choques"],
+            ["E-03", "Recepcion opera sobre una fuente \u00fanica, sin choques"],
             ["E-04", "Doctor consulta agenda en tiempo real con contexto"],
         ],
     )
     doc.add_paragraph(
         "Para el trabajo nuevo seleccione la historia US-06 Anti doble-agendamiento, porque representa un "
-        "riesgo real de operacion y obliga a validar concurrencia, no solo el camino feliz."
+        "riesgo real de operaci\u00f3n y obliga a validar concurrencia, no solo el camino feliz."
     )
     add_code_box(
         doc,
         "Prompt utilizado",
-        "Tomar el MVP Canvas, personas, requisitos e historias iniciales del Discovery Agent para generar epicas, historias de usuario INVEST, criterios de aceptacion, backlog priorizado y plan de sprint.",
+        "Tomar el MVP Canvas, personas, requisitos e historias iniciales del Discovery Agent para generar \u00e9picas, historias de usuario INVEST, criterios de aceptacion, backlog priorizado y plan de sprint.",
     )
     add_code_box(
         doc,
@@ -187,24 +187,24 @@ def main():
         "Repositorio: https://github.com/juancvxdev/agile-delivery-team\nArtefactos: deliveries/citasdentista/outputs/epics.md, stories.md, sprint-plan.md, architecture.md\nHistoria seleccionada: US-06 Anti doble-agendamiento.",
     )
 
-    doc.add_heading("Analisis del desarrollo con SDD", level=1)
+    doc.add_heading("An\u00e1lisis del desarrollo con SDD", level=1)
     doc.add_paragraph(
-        "La funcionalidad US-06 se implemento con Spec-Driven Development. Primero defini los criterios en "
-        "Spec-Kit y luego implemente el servicio Spring Boot. Los artefactos quedaron versionados en "
+        "La funcionalidad US-06 se implement\u00f3 con Spec-Driven Development. Primero defin\u00ed los criterios en "
+        "Spec-Kit y luego implement\u00e9 el servicio Spring Boot. Los artefactos quedaron versionados en "
         "`specs/us-06-anti-doble-agendamiento/`."
     )
     add_table(
         doc,
-        ["Artefacto", "Proposito"],
+        ["Artefacto", "Prop\u00f3sito"],
         [
             ["spec.md", "Define FR-001 a FR-007, escenarios y edge cases"],
-            ["plan.md", "Explica stack, diseno tecnico y validacion"],
-            ["tasks.md", "Lista tareas de implementacion, pruebas y calidad"],
+            ["plan.md", "Explica stack, dise\u00f1o t\u00e9cnico y validaci\u00f3n"],
+            ["tasks.md", "Lista tareas de implementaci\u00f3n, pruebas y calidad"],
         ],
     )
     doc.add_paragraph(
-        "El diseno usa `ConcurrentHashMap.putIfAbsent` para que el turno dental se reserve de forma atomica. "
-        "Asi, cuando dos pacientes intentan tomar el mismo horario, solo una reserva queda registrada."
+        "El dise\u00f1o usa `ConcurrentHashMap.putIfAbsent` para que el turno dental se reserve de forma at\u00f3mica. "
+        "As\u00ed, cuando dos pacientes intentan tomar el mismo horario, solo una reserva queda registrada."
     )
     add_code_box(
         doc,
@@ -217,10 +217,10 @@ def main():
         "Pruebas ejecutadas: 7\nFallos: 0\nErrores: 0\nCobertura JaCoCo: 90.9%\nArchivos principales: AgendaDentalService.java, AgendaDentalController.java, AgendaDentalServiceTest.java",
     )
 
-    doc.add_heading("Analisis del Quality Agent", level=1)
+    doc.add_heading("An\u00e1lisis del Quality Agent", level=1)
     doc.add_paragraph(
-        "La validacion se hizo con el Quality Agent de la Unidad 3, reutilizando su constitucion, skill, "
-        "subagentes, comandos, hook y conexion MCP. El agente valido los tres pilares del Definition of Done: "
+        "La validaci\u00f3n se hizo con el Quality Agent de la Unidad 3, reutilizando su constituci\u00f3n, skill, "
+        "subagentes, comandos, hook y conexi\u00f3n MCP. El agente valid\u00f3 los tres pilares del Definition of Done: "
         "pruebas, seguridad y criterios."
     )
     add_table(
@@ -228,7 +228,7 @@ def main():
         ["Pilar", "Resultado final"],
         [
             ["Pruebas", "7/7 pruebas aprobadas, cobertura 90.9%"],
-            ["Seguridad", "Semgrep sin hallazgos, 0 criticas y 0 secretos"],
+            ["Seguridad", "Semgrep sin hallazgos, 0 cr\u00edticas y 0 secretos"],
             ["Criterios", "FR-001 a FR-007 y edge case de concurrencia cubiertos"],
         ],
     )
@@ -240,7 +240,7 @@ def main():
     add_code_box(
         doc,
         "Gate bloqueado",
-        "GATE DE CALIDAD: BLOQUEADO\nPRUEBAS: OK\nSEGURIDAD: OK\nCRITERIOS: FR-003 incumple; EDGE-CONCURRENCY incumple\nMotivo: faltaba prueba explicita de concurrencia.",
+        "GATE DE CALIDAD: BLOQUEADO\nPRUEBAS: OK\nSEGURIDAD: OK\nCRITERIOS: FR-003 incumple; EDGE-CONCURRENCY incumple\nMotivo: faltaba prueba expl\u00edcita de concurrencia.",
     )
     if GATE_BLOCKED_IMG.exists():
         p = doc.add_paragraph("Captura de consola - bloqueo del gate:")
@@ -249,10 +249,10 @@ def main():
     add_code_box(
         doc,
         "Gate aprobado",
-        "GATE DE CALIDAD: APROBADO\nPRUEBAS: 7/7 - cobertura 90.9% >= 80%\nSEGURIDAD: 0 criticas - 0 secretos\nCRITERIOS: 8 criterios cumplen",
+        "GATE DE CALIDAD: APROBADO\nPRUEBAS: 7/7 - cobertura 90.9% >= 80%\nSEGURIDAD: 0 cr\u00edticas - 0 secretos\nCRITERIOS: 8 criterios cumplen",
     )
     if GATE_APPROVED_IMG.exists():
-        p = doc.add_paragraph("Captura de consola - resolucion aprobada:")
+        p = doc.add_paragraph("Captura de consola - resoluci\u00f3n aprobada:")
         p.runs[0].bold = True
         doc.add_picture(str(GATE_APPROVED_IMG), width=Inches(6.3))
 
@@ -260,9 +260,9 @@ def main():
     add_bullets(
         doc,
         [
-            "El flujo completo conecto descubrimiento, planificacion, desarrollo y validacion automatica.",
-            "La historia US-06 demostro que la concurrencia debe probarse explicitamente y no asumirse por cobertura.",
-            "El Quality Gate cambio el cierre del trabajo: la funcionalidad solo se considero terminada cuando los tres pilares estuvieron en verde.",
+            "El flujo completo conecto descubrimiento, planificaci\u00f3n, desarrollo y validaci\u00f3n automatica.",
+            "La historia US-06 demostr\u00f3 que la concurrencia debe probarse expl\u00edcitamente y no asumirse por cobertura.",
+            "El Quality Gate cambio el cierre del trabajo: la funcionalidad solo se consider\u00f3 terminada cuando los tres pilares estuvieron en verde.",
         ],
     )
 
@@ -272,7 +272,7 @@ def main():
         [
             "Mantener Spec-Kit como fuente de criterios antes de implementar nuevas historias.",
             "Ejecutar el Quality Agent antes de cada entrega para evitar omisiones de pruebas o seguridad.",
-            "Agregar el gate a integracion continua cuando el producto avance a mas funcionalidades.",
+            "Agregar el gate a integraci\u00f3n continua cuando el producto avance a m\u00e1s funcionalidades.",
         ],
     )
 
@@ -293,7 +293,7 @@ def main():
             "Evidencia SDD: specs/us-06-anti-doble-agendamiento/spec.md, plan.md y tasks.md.",
             "Evidencia Quality Agent: quality-output/verification.json y quality-output/report.html.",
             "Evidencia del bloqueo: quality-output/before-fix/gate-output.txt.",
-            "Evidencia de resolucion: quality-output/gate-output.txt.",
+            "Evidencia de resoluci\u00f3n: quality-output/gate-output.txt.",
         ],
     )
 
