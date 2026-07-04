@@ -56,9 +56,9 @@ El informe Word editable está en:
 
 Incluye introducción, análisis de Discovery Agent, Agile Delivery Team, SDD, Quality Agent, capturas de consola del gate, conclusiones, recomendaciones y anexos con enlaces a repositorios.
 
-## Evidencias y prompts
+## Evidencias por etapa
 
-Los prompts y logs usados para el informe están en:
+Los logs y evidencias usados para el informe están en:
 
 - `evidence/discovery/`
 - `evidence/agile/`

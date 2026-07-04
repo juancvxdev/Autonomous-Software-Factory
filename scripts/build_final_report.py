@@ -147,11 +147,6 @@ def main():
     )
     add_code_box(
         doc,
-        "Prompt utilizado",
-        "Usar las entrevistas de doctor, paciente y secretaria para descubrir el MVP de un sistema de reserva de citas dentales. Identificar personas, dolores, propuesta de valor, MVP Canvas, riesgos, supuestos e historias iniciales.",
-    )
-    add_code_box(
-        doc,
         "Log / evidencia",
         "Repositorio: https://github.com/juancvxdev/discovery-agent\nArtefactos: discoveries/citasdentista/outputs/mvp-canvas.md, personas.md, user-stories.md, report.html\nResultado: MVP Canvas de citasdentista con propuesta de valor y metrica de no-show.",
     )
@@ -175,11 +170,6 @@ def main():
     doc.add_paragraph(
         "Para el trabajo nuevo seleccione la historia US-06 Anti doble-agendamiento, porque representa un "
         "riesgo real de operaci\u00f3n y obliga a validar concurrencia, no solo el camino feliz."
-    )
-    add_code_box(
-        doc,
-        "Prompt utilizado",
-        "Tomar el MVP Canvas, personas, requisitos e historias iniciales del Discovery Agent para generar \u00e9picas, historias de usuario INVEST, criterios de aceptacion, backlog priorizado y plan de sprint.",
     )
     add_code_box(
         doc,
@@ -208,11 +198,6 @@ def main():
     )
     add_code_box(
         doc,
-        "Prompt utilizado",
-        "Implementar la historia US-06 Anti doble-agendamiento usando Spec-Driven Development con Spec-Kit. Crear spec.md, plan.md y tasks.md; luego implementar Java + Spring Boot con pruebas automatizadas.",
-    )
-    add_code_box(
-        doc,
         "Log / evidencia",
         "Pruebas ejecutadas: 7\nFallos: 0\nErrores: 0\nCobertura JaCoCo: 90.9%\nArchivos principales: AgendaDentalService.java, AgendaDentalController.java, AgendaDentalServiceTest.java",
     )
@@ -231,11 +216,6 @@ def main():
             ["Seguridad", "Semgrep sin hallazgos, 0 cr\u00edticas y 0 secretos"],
             ["Criterios", "FR-001 a FR-007 y edge case de concurrencia cubiertos"],
         ],
-    )
-    add_code_box(
-        doc,
-        "Prompt utilizado",
-        "Validar el proyecto Spring Boot de citas dentales con el Quality Agent. Leer criterios desde specs/us-06-anti-doble-agendamiento/spec.md, ejecutar pruebas/cobertura, revisar seguridad y generar verification.json y report.html.",
     )
     add_code_box(
         doc,
