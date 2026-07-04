@@ -145,11 +145,6 @@ def main():
             "M\u00e9trica principal: reducir la tasa de no-show y aumentar citas gestionadas dentro del sistema.",
         ],
     )
-    add_code_box(
-        doc,
-        "Log / evidencia",
-        "Repositorio: https://github.com/juancvxdev/discovery-agent\nArtefactos: discoveries/citasdentista/outputs/mvp-canvas.md, personas.md, user-stories.md, report.html\nResultado: MVP Canvas de citasdentista con propuesta de valor y metrica de no-show.",
-    )
 
     doc.add_heading("An\u00e1lisis del Agile Delivery Team", level=1)
     doc.add_paragraph(
@@ -171,11 +166,6 @@ def main():
         "Para el trabajo nuevo seleccione la historia US-06 Anti doble-agendamiento, porque representa un "
         "riesgo real de operaci\u00f3n y obliga a validar concurrencia, no solo el camino feliz."
     )
-    add_code_box(
-        doc,
-        "Log / evidencia",
-        "Repositorio: https://github.com/juancvxdev/agile-delivery-team\nArtefactos: deliveries/citasdentista/outputs/epics.md, stories.md, sprint-plan.md, architecture.md\nHistoria seleccionada: US-06 Anti doble-agendamiento.",
-    )
 
     doc.add_heading("An\u00e1lisis del desarrollo con SDD", level=1)
     doc.add_paragraph(
@@ -196,11 +186,6 @@ def main():
         "El dise\u00f1o usa `ConcurrentHashMap.putIfAbsent` para que el turno dental se reserve de forma at\u00f3mica. "
         "As\u00ed, cuando dos pacientes intentan tomar el mismo horario, solo una reserva queda registrada."
     )
-    add_code_box(
-        doc,
-        "Log / evidencia",
-        "Pruebas ejecutadas: 7\nFallos: 0\nErrores: 0\nCobertura JaCoCo: 90.9%\nArchivos principales: AgendaDentalService.java, AgendaDentalController.java, AgendaDentalServiceTest.java",
-    )
 
     doc.add_heading("An\u00e1lisis del Quality Agent", level=1)
     doc.add_paragraph(
@@ -217,20 +202,11 @@ def main():
             ["Criterios", "FR-001 a FR-007 y edge case de concurrencia cubiertos"],
         ],
     )
-    add_code_box(
-        doc,
-        "Gate bloqueado",
-        "GATE DE CALIDAD: BLOQUEADO\nPRUEBAS: OK\nSEGURIDAD: OK\nCRITERIOS: FR-003 incumple; EDGE-CONCURRENCY incumple\nMotivo: faltaba prueba expl\u00edcita de concurrencia.",
-    )
+    doc.add_paragraph("Como evidencia de validacion automatica se incluyeron las capturas de consola del gate bloqueado y del gate aprobado, generadas desde este proyecto final.")
     if GATE_BLOCKED_IMG.exists():
         p = doc.add_paragraph("Captura de consola - bloqueo del gate:")
         p.runs[0].bold = True
         doc.add_picture(str(GATE_BLOCKED_IMG), width=Inches(6.3))
-    add_code_box(
-        doc,
-        "Gate aprobado",
-        "GATE DE CALIDAD: APROBADO\nPRUEBAS: 7/7 - cobertura 90.9% >= 80%\nSEGURIDAD: 0 cr\u00edticas - 0 secretos\nCRITERIOS: 8 criterios cumplen",
-    )
     if GATE_APPROVED_IMG.exists():
         p = doc.add_paragraph("Captura de consola - resoluci\u00f3n aprobada:")
         p.runs[0].bold = True
